@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf7eb;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.profile {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #555;
+}
+
+.profile a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+

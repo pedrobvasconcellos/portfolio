@@ -1,0 +1,150 @@
+:root {
+    --bg-color: #f9f9fb;
+    --text-color: #222;
+    --task-bg: #fff;
+    --task-border: #e0e0e0;
+    --accent-color: #4f46e5;
+    --accent-hover: #4338ca;
+    --danger-color: #ef4444;
+    --done-color: #10b981;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #e4e4e4;
+    --task-bg: #1e1e1e;
+    --task-border: #333;
+    --shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: var(--task-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: background 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+#toggle-theme {
+    padding: 8px 14px;
+    border-radius: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#toggle-theme:hover {
+    background-color: var(--accent-hover);
+}
+
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--task-border);
+    border-radius: 12px;
+    background: var(--task-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+#add-task {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#add-task:hover {
+    background-color: var(--accent-hover);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: var(--task-bg);
+    border: 1px solid var(--task-border);
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.task-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 6px;
+    transition: transform 0.2s ease;
+}
+
+.task-buttons button:hover {
+    transform: scale(1.1);
+}
+
+.task-buttons button:nth-child(1) {
+    color: var(--done-color);
+}
+
+.task-buttons button:nth-child(2) {
+    color: var(--danger-color);
+}
